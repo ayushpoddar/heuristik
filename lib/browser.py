@@ -5,13 +5,13 @@ import time
 class Browser():
     """represents the browser"""
 
-    def __init__(self, url = None, mobile = True, headless = True):
+    def __init__(self, url = None, mobile = True, headless = True, download_directory = False):
         options = Options()
         options.headless = headless
-        # if mobile:
-        #     options.add_argument("user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Mobile Safari/537.36")
-        # else:
         options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36")
+
+        if download_directory:
+            options.add_experimental_option('prefs', { 'download.default_directory': str(download_directory) })
 
         self.driver = webdriver.Chrome(options = options)
 
