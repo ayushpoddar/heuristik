@@ -22,6 +22,13 @@ class Browser():
             self.fetch_url(url)
 
 
+    def __enter__(self):
+        return self
+
+    def __exit__(self, type, value, traceback):
+        self.driver.quit()
+
+
     def resize_to_mobile(self, width = 425, height = 1300):
         """Resize the browser to mobile screen sizes"""
         self.driver.set_window_size(width, height)

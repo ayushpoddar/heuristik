@@ -9,31 +9,30 @@ class URLResource():
         self.url = url
         self.folder = self.project_dir / uuid.uuid4().hex
         self.html = self.folder / "scrap.html"
+        self.folder.mkdir(exist_ok=True)
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, type, value, traceback):
+        self.remove_folder()
 
     def get_url(self):
         """Get URL"""
-        try:
-            self.folder.mkdir(exist_ok = True)
-            b = browser.Browser(download_directory=self.folder)
+        with browser.Browser(download_directory=self.folder) as b:
             b.fetch_url(self.url)
             b.save_html(self.html)
-        finally:
-            b.driver.quit()
 
     def get_attributes(self):
-        checker_obj = checker.Checker(self)
-        checker_obj.build_attributes()
-        print(checker_obj.attributes)
+        self.attributes = checker.Checker(self).media_type_info()
+        return self.attributes
 
     def remove_folder(self):
         shutil.rmtree(self.folder)
 
 
-
-resource = URLResource(sys.argv[1])
-resource.get_url()
-try:
-    resource.get_attributes()
-finally:
-    resource.remove_folder()
+with URLResource(sys.argv[1]) as r:
+    r.get_url()
+    a = r.get_attributes()
+    print(a)
 

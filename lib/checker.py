@@ -20,15 +20,15 @@ class Checker():
         for ele in self.bs_soup.find_all(["script", "link"]):
             ele.decompose()
 
-    def build_attributes(self):
-        """Build the attributes dictionary for a URL resource"""
+    def media_type_info(self):
+        """Return a dictionary containing information on the media type for a URL resource"""
         if self.html.is_file():
-            self.attributes = {
+            return {
                 "pdf": self.is_pdf_downloaded(),
                 "article": self.is_article()
             }
         else:
-            self.attributes = None
+            return None
 
     def is_pdf_downloaded(self):
         """Check if a PDF has been downloaded"""
@@ -45,5 +45,4 @@ class Checker():
             readability_soup = BeautifulSoup(self.readability_doc.summary(), self.bs_parser)
             text = " ".join([s for s in readability_soup.stripped_strings])
             text = " ".join(text.split())
-            print(text)
             return len(text) > self.min_article_length
