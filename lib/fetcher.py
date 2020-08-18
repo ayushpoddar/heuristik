@@ -1,13 +1,14 @@
-import browser, sys, uuid, checker, shutil
-from pathlib import Path
+import browser, sys, uuid, checker, shutil, urllib.parse
+import defaults
 
 class URLResource():
     """fetch a given URL"""
-    project_dir = Path('/Users/ayushpoddar/Documents/workspace/heuristik')
 
     def __init__(self, url):
         self.url = url
-        self.folder = self.project_dir / uuid.uuid4().hex
+        self.url_parts = urllib.parse.urlsplit(url)
+        self.domain = self.url_parts.hostname
+        self.folder = defaults.project_dir / uuid.uuid4().hex
         self.html = self.folder / "scrap.html"
         self.folder.mkdir(exist_ok=True)
 

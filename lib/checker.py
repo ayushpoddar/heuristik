@@ -1,17 +1,19 @@
 from bs4 import BeautifulSoup
 from readability import Document
+import json
+import defaults
 
 class Checker():
     """Check a URL Resource for various types of media"""
     min_article_length = 1000
     bs_parser = "lxml"
+    with open(defaults.domain_info_file_path) as f:
+        domain_info = json.load(f)
 
     def __init__(self, url_resource):
         self.url_resource = url_resource
-        self.html = url_resource.html
-
-        if self.html.is_file():
-            with open(self.html, "r") as file:
+        if url_resource.html.is_file():
+            with open(url_resource.html, "r") as file:
                 self.bs_soup = BeautifulSoup(file, self.bs_parser)
                 self.decompose_soup()
                 self.readability_doc = Document(str(self.bs_soup))
@@ -36,3 +38,10 @@ class Checker():
             text = " ".join([s for s in readability_soup.stripped_strings])
             text = " ".join(text.split())
             return len(text) > self.min_article_length
+
+    def media_type_from_domain(self):
+        domain = self.url_resource.domain
+        if domain in self.domain_info:
+            return self.domain_info[domain]
+        else:
+            return None
