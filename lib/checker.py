@@ -20,16 +20,6 @@ class Checker():
         for ele in self.bs_soup.find_all(["script", "link"]):
             ele.decompose()
 
-    def media_type_info(self):
-        """Return a dictionary containing information on the media type for a URL resource"""
-        if self.html.is_file():
-            return {
-                "pdf": self.is_pdf_downloaded(),
-                "article": self.is_article()
-            }
-        else:
-            return None
-
     def is_pdf_downloaded(self):
         """Check if a PDF has been downloaded"""
         if list(self.url_resource.folder.glob('*.pdf')):

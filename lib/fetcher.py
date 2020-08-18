@@ -24,7 +24,16 @@ class URLResource():
             b.save_html(self.html)
 
     def get_attributes(self):
-        self.attributes = checker.Checker(self).media_type_info()
+        """Create a attributes dict describing the nature of media type"""
+        check_obj = checker.Checker(self)
+        if self.html.is_file():
+            self.attributes = {
+                "pdf": check_obj.is_pdf_downloaded(),
+                "article": check_obj.is_article()
+            }
+        else:
+            self.attributes = None
+
         return self.attributes
 
     def remove_folder(self):
