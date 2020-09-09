@@ -29,8 +29,8 @@ class URLResource():
         check_obj = checker.Checker(self)
         if self.html.is_file():
             self.attributes = {
-                "pdf": check_obj.is_pdf_downloaded(),
-                "article": check_obj.is_article()
+                "pdf": check_obj.pdf_probability(),
+                "article": check_obj.article_probability()
             }
         else:
             self.attributes = None

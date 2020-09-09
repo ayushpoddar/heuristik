@@ -25,26 +25,35 @@ class Checker():
         for ele in self.bs_soup.find_all(["script", "link"]):
             ele.decompose()
 
-    def is_pdf_downloaded(self):
-        """Check if a PDF has been downloaded"""
-        if list(self.url_resource.folder.glob('*.pdf')):
-            return True
-        else:
-            return False
+    def pdf_probability(self):
+        """1 if a PDF has been downloaded, else 0"""
+        return 1 if list(self.url_resource.folder.glob('*.pdf')) else 0
 
-    def is_article(self):
-        """Check if the URL resource is an article"""
-        if self.is_pdf_downloaded():
-            return False  # No need to check if PDF is downloaded
-        else:
+    def article_probability(self):
+        """Probability of a resource being an article"""
+        def readability_multiplier():
+            """1 if the readability parser detects substantial length of text, else 0"""
             readability_soup = BeautifulSoup(self.readability_doc.summary(), self.bs_parser)
             text = " ".join([s for s in readability_soup.stripped_strings])
             text = " ".join(text.split())
-            return len(text) > self.min_article_length
+            return int(len(text) > self.min_article_length)
+        res = (readability_multiplier() * 0.5) + (self.json_file_multiplier("article") * 0.5) + \
+                                               (self.pdf_probability() * -1)
+        return max(0, res)
+
 
     def media_type_from_domain(self):
         domain = self.url_resource.domain
         if domain in self.domain_info:
-            return self.domain_info[domain]
+            return self.domain_info[domain].lower()
         else:
             return None
+
+
+    def json_file_multiplier(self, media_type):
+        '''Return the multiplier factor obtained via json file info'''
+        m = self.media_type_from_domain()
+        if m:
+            return 1 if m == media_type else -0.5
+        else:
+            return 0.75
