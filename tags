@@ -10911,6 +10911,7 @@ arguments	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/fi
 arguments	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/ie/options.py	/^    def arguments(self):$/;"	m	class:Options
 arguments	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/webkitgtk/options.py	/^    def arguments(self):$/;"	m	class:Options
 array	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/appdirs.py	/^    import array$/;"	i
+article_probability	lib/checker.py	/^    def article_probability(self):$/;"	m	class:Checker
 asDict	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/pyparsing.py	/^    def asDict( self ):$/;"	m	class:ParseResults
 asList	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/pyparsing.py	/^    def asList( self ):$/;"	m	class:ParseResults
 asXML	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/pyparsing.py	/^    def asXML( self, doctag=None, namedItemsOnly=False, indent="", formatted=True ):$/;"	m	class:ParseResults
@@ -11218,7 +11219,7 @@ broadcast_address	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/i
 brotli	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/response.py	/^    brotli = None$/;"	v
 brotli	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/response.py	/^    import brotli$/;"	i
 browser	lib/classifier.py	/^import browser$/;"	i
-browser	lib/fetcher.py	/^import browser, sys, uuid, checker, shutil, urllib.parse$/;"	i
+browser	lib/fetcher.py	/^import browser, checker, defaults$/;"	i
 browser_attach_timeout	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/ie/options.py	/^    def browser_attach_timeout(self):$/;"	m	class:Options
 browser_attach_timeout	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/ie/options.py	/^    def browser_attach_timeout(self, value):$/;"	m	class:Options
 bs4	.direnv/python-3.7.3/lib/python3.7/site-packages/bs4/diagnose.py	/^import bs4$/;"	i
@@ -11530,7 +11531,7 @@ checkable	.direnv/python-3.7.3/lib/python3.7/site-packages/lxml/html/__init__.py
 checked	.direnv/python-3.7.3/lib/python3.7/site-packages/lxml/html/__init__.py	/^    def checked(self):$/;"	m	class:InputElement
 checked	.direnv/python-3.7.3/lib/python3.7/site-packages/lxml/html/__init__.py	/^    def checked(self, value):$/;"	m	class:InputElement
 checked	.direnv/python-3.7.3/lib/python3.7/site-packages/lxml/includes/libxml/entities.h	/^    int			 checked;	\/* was the entity content checked *\/$/;"	m	struct:_xmlEntity
-checker	lib/fetcher.py	/^import browser, sys, uuid, checker, shutil, urllib.parse$/;"	i
+checker	lib/fetcher.py	/^import browser, checker, defaults$/;"	i
 childGenerator	.direnv/python-3.7.3/lib/python3.7/site-packages/bs4/element.py	/^    def childGenerator(self):$/;"	m	class:Tag
 childNodes	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/html5lib/treebuilders/etree.py	/^        childNodes = property(_getChildNodes, _setChildNodes)$/;"	v	class:getETreeBuilder.Element
 childNodes	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/html5lib/treebuilders/etree_lxml.py	/^    childNodes = property(_getChildNodes)$/;"	v	class:Document
@@ -12240,7 +12241,7 @@ defaultdict	.direnv/python-3.7.3/lib/python3.7/site-packages/pipdeptree.py	/^fro
 defaults	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_internal/req/req_file.py	/^    defaults = parser.get_default_values()$/;"	v
 defaults	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/distlib/util.py	/^    defaults = {$/;"	v	class:CSVBase
 defaults	lib/checker.py	/^import defaults$/;"	i
-defaults	lib/fetcher.py	/^import defaults$/;"	i
+defaults	lib/fetcher.py	/^import browser, checker, defaults$/;"	i
 defaultsubelt	.direnv/python-3.7.3/lib/python3.7/site-packages/lxml/includes/libxml/HTMLparser.h	/^    const char* defaultsubelt;	\/* subelement for suggested auto-repair$/;"	m	struct:_htmlElemDesc
 defs	.direnv/python-3.7.3/lib/python3.7/site-packages/lxml/html/__init__.py	/^from . import defs$/;"	i
 defs	.direnv/python-3.7.3/lib/python3.7/site-packages/lxml/html/clean.py	/^from lxml.html import defs$/;"	i
@@ -14984,7 +14985,6 @@ is_appengine_sandbox	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendo
 is_appengine_sandbox	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/contrib/_appengine_environ.py	/^def is_appengine_sandbox():$/;"	f
 is_appengine_sandbox	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/contrib/appengine.py	/^is_appengine_sandbox = _appengine_environ.is_appengine_sandbox$/;"	v
 is_archive_file	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_internal/download.py	/^def is_archive_file(name):$/;"	f
-is_article	lib/checker.py	/^    def is_article(self):$/;"	m	class:Checker
 is_artifact	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_internal/models/link.py	/^    def is_artifact(self):$/;"	m	class:Link
 is_cdata	.direnv/python-3.7.3/lib/python3.7/site-packages/soupsieve/css_match.py	/^    def is_cdata(obj):$/;"	m	class:_DocumentNav
 is_commit_id_equal	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_internal/vcs/__init__.py	/^    def is_commit_id_equal(self, dest, name):$/;"	m	class:VersionControl
@@ -15084,7 +15084,6 @@ is_optional_start	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/h
 is_package	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/six.py	/^    def is_package(self, fullname):$/;"	m	class:_SixMetaPathImporter
 is_package	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/urllib3/packages/six.py	/^    def is_package(self, fullname):$/;"	m	class:_SixMetaPathImporter
 is_package	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/packages/six.py	/^    def is_package(self, fullname):$/;"	m	class:_SixMetaPathImporter
-is_pdf_downloaded	lib/checker.py	/^    def is_pdf_downloaded(self):$/;"	m	class:Checker
 is_permanent_redirect	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/requests/models.py	/^    def is_permanent_redirect(self):$/;"	m	class:Response
 is_pinned	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_internal/req/req_install.py	/^    def is_pinned(self):$/;"	m	class:InstallRequirement
 is_postrelease	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/packaging/version.py	/^    def is_postrelease(self):$/;"	m	class:LegacyVersion
@@ -15332,6 +15331,7 @@ json	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/firefox
 json	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py	/^                import json$/;"	i
 json	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/remote/utils.py	/^import json$/;"	i
 json	lib/checker.py	/^import json$/;"	i
+json_file_multiplier	lib/checker.py	/^    def json_file_multiplier(self, media_type):$/;"	m	class:Checker
 jumpTo	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/html5lib/_inputstream.py	/^    def jumpTo(self, bytes):$/;"	m	class:EncodingBytes
 kCFStringEncodingUTF8	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/urllib3/contrib/_securetransport/bindings.py	/^    kCFStringEncodingUTF8 = CFStringEncoding(0x08000100)$/;"	v	class:CFConst
 kCFStringEncodingUTF8	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/contrib/_securetransport/bindings.py	/^    kCFStringEncodingUTF8 = CFStringEncoding(0x08000100)$/;"	v	class:CFConst
@@ -16956,7 +16956,7 @@ parse	.direnv/python-3.7.3/lib/python3.7/site-packages/readability/readability.p
 parse	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/remote/remote_connection.py	/^    from urllib import parse$/;"	i
 parse	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/remote/remote_connection.py	/^    import urlparse as parse$/;"	i
 parse	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/packages/six.py	/^    parse = _importer._get_module("moves.urllib_parse")$/;"	v	class:Module_six_moves_urllib
-parse	lib/fetcher.py	/^import browser, sys, uuid, checker, shutil, urllib.parse$/;"	i
+parse	lib/fetcher.py	/^import sys, uuid, shutil, urllib.parse$/;"	i
 parseError	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/html5lib/html5parser.py	/^    def parseError(self, errorcode="XXX-undefined-error", datavars=None):$/;"	m	class:HTMLParser
 parseFile	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/pyparsing.py	/^    def parseFile( self, file_or_filename, parseAll=False ):$/;"	m	class:ParserElement
 parseFlags	.direnv/python-3.7.3/lib/python3.7/site-packages/lxml/includes/libxml/tree.h	/^    int             parseFlags;	\/* set of xmlParserOption used to parse the$/;"	m	struct:_xmlDoc
@@ -17134,6 +17134,7 @@ pause	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/common
 pause	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/common/actions/pointer_actions.py	/^    def pause(self, duration=0):$/;"	m	class:PointerActions
 pctxt	.direnv/python-3.7.3/lib/python3.7/site-packages/lxml/includes/libxml/debugXML.h	/^    xmlXPathContextPtr pctxt;$/;"	m	struct:_xmlShellCtxt
 pdb	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/pyparsing.py	/^                import pdb$/;"	i
+pdf_probability	lib/checker.py	/^    def pdf_probability(self):$/;"	m	class:Checker
 pedantic	.direnv/python-3.7.3/lib/python3.7/site-packages/lxml/includes/libxml/parser.h	/^    int                pedantic;      \/* signal pedantic warnings *\/$/;"	m	struct:_xmlParserCtxt
 peek	.direnv/python-3.7.3/lib/python3.7/site-packages/cssselect/parser.py	/^    def peek(self):$/;"	m	class:TokenStream
 pentities	.direnv/python-3.7.3/lib/python3.7/site-packages/lxml/includes/libxml/tree.h	/^    void          *pentities;   \/* Hash table for param entities if any *\/$/;"	m	struct:_xmlDtd
@@ -17781,6 +17782,7 @@ read_stream	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/distlib
 read_text_file	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_internal/utils/misc.py	/^def read_text_file(filename):$/;"	f
 read_timeout	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/urllib3/util/timeout.py	/^    def read_timeout(self):$/;"	m	class:Timeout
 read_timeout	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/util/timeout.py	/^    def read_timeout(self):$/;"	m	class:Timeout
+readability_multiplier	lib/checker.py	/^        def readability_multiplier():$/;"	f	function:Checker.article_probability
 readable	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/distlib/_backport/tarfile.py	/^    def readable(self):$/;"	m	class:ExFileObject
 readable	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/urllib3/response.py	/^    def readable(self):$/;"	m	class:HTTPResponse
 readable	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/response.py	/^    def readable(self):$/;"	m	class:HTTPResponse
@@ -18538,7 +18540,7 @@ shutil	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/firef
 shutil	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/firefox/firefox_profile.py	/^import shutil$/;"	i
 shutil	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/firefox/webdriver.py	/^import shutil$/;"	i
 shutil	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/contrib/securetransport.py	/^import shutil$/;"	i
-shutil	lib/fetcher.py	/^import browser, sys, uuid, checker, shutil, urllib.parse$/;"	i
+shutil	lib/fetcher.py	/^import sys, uuid, shutil, urllib.parse$/;"	i
 sign_file	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/distlib/index.py	/^    def sign_file(self, filename, signer, sign_password, keystore=None):$/;"	m	class:PackageIndex
 signal	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_internal/utils/ui.py	/^from signal import SIGINT, default_int_handler, signal$/;"	i
 signal	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/progress/helpers.py	/^from signal import signal, SIGINT$/;"	i
@@ -19225,7 +19227,7 @@ sys	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/packages/ssl_match_
 sys	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/packages/ssl_match_hostname/_implementation.py	/^import sys$/;"	i
 sys	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/util/ssl_.py	/^import sys$/;"	i
 sys	.direnv/python-3.7.3/lib/python3.7/site-packages/urllib3/util/wait.py	/^import sys$/;"	i
-sys	lib/fetcher.py	/^import browser, sys, uuid, checker, shutil, urllib.parse$/;"	i
+sys	lib/fetcher.py	/^import sys, uuid, shutil, urllib.parse$/;"	i
 sysconfig	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_internal/locations.py	/^import sysconfig$/;"	i
 sysconfig	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_internal/pep425tags.py	/^import sysconfig$/;"	i
 sysconfig	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_internal/req/req_install.py	/^import sysconfig$/;"	i
@@ -20275,7 +20277,7 @@ urllib	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/distlib/comp
 urllib	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/html5lib/_inputstream.py	/^from pip._vendor.six.moves import http_client, urllib$/;"	i
 urllib	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/pkg_resources/__init__.py	/^from pip._vendor.six.moves import urllib, map, filter$/;"	i
 urllib	.direnv/python-3.7.3/lib/python3.7/site-packages/readability/readability.py	/^            import urllib.request, urllib.parse, urllib.error$/;"	i
-urllib	lib/fetcher.py	/^import browser, sys, uuid, checker, shutil, urllib.parse$/;"	i
+urllib	lib/fetcher.py	/^import sys, uuid, shutil, urllib.parse$/;"	i
 urllib2	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/distlib/compat.py	/^    import urllib.request as urllib2$/;"	i
 urllib2	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/distlib/compat.py	/^    import urllib2$/;"	i
 urllib2	.direnv/python-3.7.3/lib/python3.7/site-packages/readability/readability.py	/^            import urllib2$/;"	i
@@ -20432,7 +20434,7 @@ uts46data	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/idna/uts4
 uuid	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/pyparsing.py	/^    import uuid$/;"	i
 uuid	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/pyparsing.py	/^    uuid = Regex(r'[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}').setName("UUID")$/;"	v	class:pyparsing_common
 uuid	.direnv/python-3.7.3/lib/python3.7/site-packages/selenium/webdriver/common/actions/input_device.py	/^import uuid$/;"	i
-uuid	lib/fetcher.py	/^import browser, sys, uuid, checker, shutil, urllib.parse$/;"	i
+uuid	lib/fetcher.py	/^import sys, uuid, shutil, urllib.parse$/;"	i
 v	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/html5lib/serializer.py	/^            v = _utils.surrogatePairToCodepoint(v)$/;"	v
 v	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/html5lib/serializer.py	/^            v = ord(v)$/;"	v
 v4_int_to_packed	.direnv/python-3.7.3/lib/python3.7/site-packages/pip/_vendor/ipaddress.py	/^def v4_int_to_packed(address):$/;"	f
