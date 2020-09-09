@@ -1,5 +1,5 @@
-import browser, sys, uuid, checker, shutil, urllib.parse
-import defaults
+import browser, checker, defaults
+import sys, uuid, shutil, urllib.parse
 
 class URLResource():
     """fetch a given URL"""

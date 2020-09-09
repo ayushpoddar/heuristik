@@ -7,7 +7,10 @@ class Checker():
     """Check a URL Resource for various types of media"""
     min_article_length = 1000
     bs_parser = "lxml"
+
     with open(defaults.domain_info_file_path) as f:
+        '''Load the JSON file containing info on the type of content
+           expected in any particular domain'''
         domain_info = json.load(f)
 
     def __init__(self, url_resource):
